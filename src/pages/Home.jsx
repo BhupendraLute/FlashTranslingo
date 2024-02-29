@@ -1,8 +1,13 @@
 import React from 'react'
+import { Hero, Testimonials } from '../Components'
 
 function Home() {
   return (
-    <div>Home</div>
+    <div className='w-full pt-10'>
+      <Hero />
+
+      <Testimonials />
+    </div>
   )
 }
 

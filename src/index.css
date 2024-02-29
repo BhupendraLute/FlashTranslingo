@@ -5,3 +5,8 @@
 :root {
     --dark-color: #0f0f32;
 }
+
+.glass {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+}
