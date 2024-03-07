@@ -1,9 +1,39 @@
-import React, { useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import TextArea from './TextArea'
 import LangSelector from './LangSelector'
+import { Context } from '../../context/context'
 
 function Translator() {
+
+  const {getTranslatedText} = useContext(Context)
+
+  const [inputText, setInputText] = useState("")
+  const [translatedText, setTranslatedText] = useState("")
+
   
+  useEffect(() => {
+
+    let timeoutId;
+
+    clearTimeout(timeoutId)
+
+    timeoutId = setTimeout(() => {
+      inputText !== "" && getTranslatedText(inputText).then((res)=>{
+        console.log(translatedText);
+        return setTranslatedText(res)
+      } )
+    }, 1000);
+
+    
+    return () => clearTimeout(timeoutId);
+
+  }, [inputText])
+
+
+  
+  const handleChange = async (e)=> {
+      setInputText(e.target.value)
+  }
 
   return (
     <section className='relative w-full pt-14 '>
@@ -12,8 +42,8 @@ function Translator() {
           <div className="flex justify-start">
             <LangSelector />
           </div>
-          <div className="">
-            <TextArea  placeholder={"Type here tuo translate..."} />
+          <div>
+            <TextArea handleChange={handleChange} value={inputText ? inputText : "" }  placeholder={"Type here tuo translate..."} />
           </div>
         </div>
 
@@ -21,8 +51,8 @@ function Translator() {
           <div className="flex justify-end">
             <LangSelector />
           </div>
-          <div className="">
-            <TextArea placeholder={"Translation result will be displayed here..."} />
+          <div>
+            <TextArea readOnly={true} value={translatedText? translatedText : ""} placeholder={"Translation result will be displayed here..."} />
           </div>
         </div>
 

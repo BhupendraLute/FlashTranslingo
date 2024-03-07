@@ -23,7 +23,7 @@ async function fetchTranslationResult(srcLang, targetLang, inputText) {
 		return data;
 	} catch (error) {
 		console.error(error);
-		return null
+		throw new Error(error?.message)
 	}
 }
 

@@ -7,7 +7,8 @@ export const Context = createContext();
 export const DataProvider = ({ children }) => {
 
   const [languages, setLanguages] = useState([])
-  const [translatesText, setTranslatesText] = useState(null)
+  const [recentTranslation, setRecentTranslation] = useState([])
+  const [translatedText, setTranslatedText] = useState(null)
 
   useEffect(() => {
     const data = fetchLanguages()
@@ -20,7 +21,7 @@ export const DataProvider = ({ children }) => {
   }, [])
 
 
-  async function getTranslatedText(srcLang, targetLang, inputText){
+  async function getTranslatedText(inputText, srcLang='en', targetLang='hi'){
     const data = await fetchTranslationResult(srcLang, targetLang, inputText)
     const result = data?.translatedText
     return result
