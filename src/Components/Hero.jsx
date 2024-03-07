@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+
 
 function Hero() {
     return (
@@ -8,7 +10,7 @@ function Hero() {
                 <div className='relative z-50 py-4 lg:py-2'>
                     <h1 className='text-5xl font-extrabold'>Translate Any Text Instantly!</h1>
                     <p className='mt-4 font-semibold text-2xl md:text-3xl'>Break Language Barriers Effortlessly with <span className="text-orange-600 font-bold">FlashTranslingo.</span></p>
-                    <button className='mt-8 py-2 px-4 rounded-lg text-white bg-orange-400 hover:bg-blue-800 dark:hover:bg-blue-800 dark:bg-orange-400 ring-1 ring-black/5 hover:shadow-md transition-all duration-200 font-bold'>Translate Now</button>
+                    <div className="mt-8"><Link to={"/translator"} className='py-2 px-4 rounded-lg text-white bg-orange-400 hover:bg-blue-800 dark:hover:bg-blue-800 dark:bg-orange-400 ring-1 ring-black/5 hover:shadow-md transition-all duration-200 font-bold'>Translate Now</Link></div>
                 </div>
             </div>
             <div className="relative flex-1">
