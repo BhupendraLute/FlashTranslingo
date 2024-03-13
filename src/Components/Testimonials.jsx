@@ -29,20 +29,6 @@ const testimonialsData = [
     photo: "https://picsum.photos/200/200?random=4",
     sentiment: "positive",
     review: "The user interface is very user-friendly and intuitive. I can easily translate any text within seconds."
-  },
-  {
-    id: 5,
-    name: "Emily Garcia",
-    photo: "https://picsum.photos/200/200?blur&random=5",
-    sentiment: "positive",
-    review: "This app has been a valuable tool for learning new languages. It helps me practice and understand the nuances of different languages."
-  },
-  {
-    id: 6,
-    name: "Charles Miller",
-    photo: "https://picsum.photos/200/200?random=6",
-    sentiment: "positive",
-    review: "I use this app daily for foreign language communication and reading comprehension. It's a reliable and helpful resource."
   }
 ];
 
