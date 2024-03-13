@@ -46,8 +46,6 @@ function Navbar({brand="YourBrand"}) {
           <ul className="flex space-x-8 font-semibold">
             <li><Link to="/" className={`text-black dark:text-white hover:text-orange-700 border-orange-500 ${isActive("/") ? 'text-orange-500 border-b-2 dark:text-orange-500' : 'border-none'}`}>Home</Link></li>
             <li><Link to="/translator" className={`text-black dark:text-white hover:text-orange-700 border-orange-500 ${isActive("/translator") ? 'text-orange-500 border-b-2 dark:text-orange-500' : 'border-none'}`}>Translator</Link></li>
-            <li><Link to="/about" className={`text-black dark:text-white hover:text-orange-700 hover:border-b-2 border-orange-500 ${isActive("/about") ? 'text-orange-500 border-b-2 dark:text-orange-500' : 'border-none'}`}>About</Link></li>
-            <li><Link to="/contact" className={`text-black dark:text-white hover:text-orange-700 hover:border-b-2 border-orange-500 ${isActive("/contact") ? 'text-orange-500 border-b-2 dark:text-orange-500' : 'border-none'}`}>Contact</Link></li>
           </ul>
           <div className="relative flex space-x-3">
             <button onClick={changeThemeMode} className='px-2 py-2 rounded-md border border-black dark:border-white dark:text-white'>

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
-import TextArea from './TextArea'
-import LangSelector from './LangSelector'
-import { Context } from '../../context/context'
+import TextArea from '../Components/Translator/TextArea'
+import LangSelector from '../Components/Translator/LangSelector'
+import { Context } from '../context/context'
 
 function Translator() {
 
@@ -41,14 +41,16 @@ function Translator() {
 
 
 	return (
-		<section className='relative w-full pt-14 '>
-			<div className="relative mt-8 mx-auto w-[92%] lg:w-4/5 flex flex-col lg:flex-row gap-4 lg:gap-0 bg-gray-100 border border-black dark:border-white dark:bg-transparent rounded-lg overflow-hidden glass">
+		<section className='relative w-full h-[85vh] pt-14 pb-14 overflow-hidden'>
+			<div className="absolute bg-blue-900 w-[48rem] h-[48rem] rounded-full top-[-20rem] left-[-25rem] z-10"></div>
+			<div className="absolute bg-yellow-300 w-[34rem] h-[34rem] rounded-full bottom-[-10rem] right-[-10rem] z-10"></div>
+			<div className="relative mt-8 mx-auto w-[92%] lg:w-4/5 flex flex-col lg:flex-row gap-4 lg:gap-0 border-black border dark:border-white bg-black/40 dark:bg-black/15 rounded-lg overflow-hidden z-[99] glass">
 				<div className="relative flex flex-col flex-1 ">
 					<div className="flex justify-start">
 						<LangSelector onLanguageChange={handleSourceLanguageChange} defaultLang={"en"} defaultLangName={"English"} />
 					</div>
 					<div>
-						<TextArea handleChange={handleChange} value={inputText ? inputText : ""} placeholder={"Type here tuo translate..."} />
+						<TextArea handleChange={handleChange} value={inputText ? inputText : ""} placeholder={"Type here to translate..."} />
 					</div>
 				</div>
 
