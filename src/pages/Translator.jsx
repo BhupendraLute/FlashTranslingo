@@ -41,7 +41,7 @@ function Translator() {
 
 
 	return (
-		<section className='relative w-full h-[85vh] pt-14 pb-14 overflow-hidden'>
+		<section className='relative w-full min-h-[85vh] pt-14 md:pt-24 pb-14 overflow-hidden'>
 			<div className="absolute bg-blue-900 w-[48rem] h-[48rem] rounded-full top-[-20rem] left-[-25rem] z-10"></div>
 			<div className="absolute bg-yellow-300 w-[34rem] h-[34rem] rounded-full bottom-[-10rem] right-[-10rem] z-10"></div>
 			<div className="relative mt-8 mx-auto w-[92%] lg:w-4/5 flex flex-col lg:flex-row gap-4 lg:gap-0 border-black border dark:border-white bg-black/40 dark:bg-black/15 rounded-lg overflow-hidden z-[99] glass">
